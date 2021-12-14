@@ -26,7 +26,8 @@ const getArtworks = async (req, res = response) => {
       image_url: `https://www.artic.edu/iiif/2/${image.image_id}/full/843,/0/default.jpg`,
     }));
 
-    res.json(dataWithUrls);
+
+    res.status(200).json(dataWithUrls);
   } catch (err) {
     res.status(500).json({message:err})
   }
